@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="eu">
 
 <head>
     <meta charset="utf-8">
@@ -28,7 +28,7 @@
                 <div class="card-body p-0">
                     <div class="row">
                         <div class="col-lg-6 d-none d-lg-flex">
-                            <div class="flex-grow-1 bg-login-image" style="background-image: url(&quot;assets/img/dogs/image3.jpeg&quot;);"></div>
+                            <div class="flex-grow-1 bg-login-image" style="background-image: url('assets/img/dogs/image3.jpeg');"></div>
                         </div>
                         <div class="col-lg-6">
                             <div class="p-5">
@@ -36,8 +36,8 @@
                                     <h4 class="text-dark mb-4">Welcome Back!</h4>
                                 </div>
                                 <form class="user" onsubmit="" >
-                                    <h5 class="text-md-center">Введите число и выберите его систему исчисления</h5>
                                     <div class="form-group">
+                                        <h5 class="text-md-center">Введите число и выбирите его систему исчисления</h5>
                                         <input class="form-control form-control-user text-center" type="text" id="input" placeholder="Введите число">
                                         <br>
                                         <input onclick="doMagic(10)" type="button" class="btn btn-success form-control" value="Рассчитать для 10й" id="butt1">
@@ -55,15 +55,107 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-9 col-lg-12 col-xl-10">
+            <div class="card shadow-lg o-hidden border-0 my-5">
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-lg-6 d-none d-lg-flex">
+                            <div class="flex-grow-1 bg-login-image" style="background-image: url('https://zelenyjmir.ru/wp-content/uploads/2017/06/Zolotistyiy-retriver-41.jpg');"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h4 class="text-dark mb-4">Двоичный калькулятор</h4>
+                                </div>
+                                <form class="user" onsubmit="" >
+                                    <div class="form-group">
+                                        <h5 class="text-md-center">Введите <b>два числа</b> и выбирите действие</h5>
+                                        <input class="form-control form-control-user text-center m-1" type="text" id="inputA" placeholder="Введите первое число">
+                                        <div class="row">
+                                            <a class="btn btn-success" style="margin-left: 150px" onclick="multiply()">X</a>
+                                            <a class="btn btn-success" style="margin-left: 20px" onclick="add()">+</a>
+                                        </div>
+                                        <input class="form-control m-1 form-control-user text-center" type="text" id="inputB" placeholder="Введите второе число">
+                                        <h3><p id="mathResult"></p></h3>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="assets/js/jquery.min.js"></script>
 <script>
+    function halfAdder(a, b){
+        const sum = xor(a,b);
+        const carry = and(a,b);
+        return [sum, carry];
+    }
+    function fullAdder(a, b, carry){
+        halfAdd = halfAdder(a,b);
+        const sum = xor(carry, halfAdd[0]);
+        carry = and(carry, halfAdd[0]);
+        carry = or(carry, halfAdd[1]);
+        return [sum, carry];
+    }
+    function xor(a, b){return (a === b ? 0 : 1);}
+    function and(a, b){return a == 1 && b == 1 ? 1 : 0;}
+    function or(a, b){return (a || b);}
+    function addBinary(a, b){
+        let sum = '';
+        let carry = '';
+        for(var i = a.length-1;i>=0; i--){
+            if(i === a.length-1){
+                //half add the first pair
+                const halfAdd1 = halfAdder(a[i],b[i]);
+                sum = halfAdd1[0]+sum;
+                carry = halfAdd1[1];
+            }else{
+                //full add the rest
+                const fullAdd = fullAdder(a[i],b[i],carry);
+                sum = fullAdd[0]+sum;
+                carry = fullAdd[1];
+            }
+        }
+
+        return carry ? carry + sum : sum;
+    }
+
+    function add(){
+        let a = document.getElementById("inputA").value.toString();
+        let b = document.getElementById("inputB").value.toString();
+        let action = `${a}\n+\n${b}\n________\n`;
+        let result = `${addBinary(a,b)} – Результат\n`;
+        let test =`Проверка: ${parseInt(a,2)} + ${parseInt(b,2)} = ${parseInt(a,2) + parseInt(b,2)} (${(parseInt(a,2) + parseInt(b,2)).toString(2)})`;
+        let c = document.getElementById("mathResult");
+        c.innerText = action+result + test;
+
+    }
+
+    function multiply(){
+        let a = parseInt(document.getElementById("inputA").value,2);
+        let b = parseInt(document.getElementById("inputB").value,2);
+        let action = `${document.getElementById("inputA").value}\n*\n${document.getElementById("inputB").value}\n________\n`;
+        let result = `${(a*b).toString(2)} – Результат\n`;
+        let test =`Проверка: ${a} X ${b} = ${a*b} (${(a*b).toString(2)})`;
+        let c = document.getElementById("mathResult");
+        c.innerText =action+ result + test;
+    }
+
     function doMagic(n){
         let i = document.getElementById("input").value;
         let a = parseInt(i,n);
-        alert("\nДесятичной: "+a
-            +"\nДвоичной: "+a.toString(2)
-            +"\nВосьмеричной: "+a.toString(8)
-            +"\nШестнадцатеричной: " + a.toString(16))
+        alert(`
+Десятичной: ${a}
+Двоичной: ${a.toString (2)}
+Восмиричной: ${a.toString (8)}
+Шестнадцатиричной: ${a.toString (16)}`)
     }
 </script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
