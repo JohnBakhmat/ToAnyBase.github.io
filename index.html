@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html lang="eu">
 
 <head>
@@ -6,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Login - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/css/Roboto.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -16,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/Shopping-Grid.css">
 </head>
 <style>
-    body{
+    body {
         font-size: xx-large;
     }
 </style>
@@ -28,22 +30,28 @@
                 <div class="card-body p-0">
                     <div class="row">
                         <div class="col-lg-6 d-none d-lg-flex">
-                            <div class="flex-grow-1 bg-login-image" style="background-image: url('assets/img/dogs/image3.jpeg');"></div>
+                            <div class="flex-grow-1 bg-login-image"
+                                 style="background-image: url('assets/img/dogs/image3.jpeg');"></div>
                         </div>
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
                                     <h4 class="text-dark mb-4">Welcome Back!</h4>
                                 </div>
-                                <form class="user" onsubmit="" >
+                                <form class="user" onsubmit="">
                                     <div class="form-group">
                                         <h5 class="text-md-center">Введите число и выбирите его систему исчисления</h5>
-                                        <input class="form-control form-control-user text-center" type="text" id="input" placeholder="Введите число">
+                                        <input class="form-control form-control-user text-center" type="text" id="input"
+                                               placeholder="Введите число">
                                         <br>
-                                        <input onclick="doMagic(10)" type="button" class="btn btn-success form-control" value="Рассчитать для 10й" id="butt1">
-                                        <input onclick="doMagic(2)" type="button" class="btn btn-success form-control" value="Рассчитать для 2й" id="butt2">
-                                        <input onclick="doMagic(8)" type="button" class="btn btn-success form-control" value="Рассчитать для 8й" id="butt3">
-                                        <input onclick="doMagic(16)" type="button" class="btn btn-success form-control" value="Рассчитать для 16й" id="butt4">
+                                        <input onclick="doMagic(10)" type="button" class="btn btn-success form-control"
+                                               value="Рассчитать для 10й" id="butt1">
+                                        <input onclick="doMagic(2)" type="button" class="btn btn-success form-control"
+                                               value="Рассчитать для 2й" id="butt2">
+                                        <input onclick="doMagic(8)" type="button" class="btn btn-success form-control"
+                                               value="Рассчитать для 8й" id="butt3">
+                                        <input onclick="doMagic(16)" type="button" class="btn btn-success form-control"
+                                               value="Рассчитать для 16й" id="butt4">
                                     </div>
                                 </form>
 
@@ -62,23 +70,86 @@
                 <div class="card-body p-0">
                     <div class="row">
                         <div class="col-lg-6 d-none d-lg-flex">
-                            <div class="flex-grow-1 bg-login-image" style="background-image: url('https://zelenyjmir.ru/wp-content/uploads/2017/06/Zolotistyiy-retriver-41.jpg');"></div>
+                            <div class="flex-grow-1 bg-login-image"
+                                 style="background-image: url('https://zelenyjmir.ru/wp-content/uploads/2017/06/Zolotistyiy-retriver-41.jpg');"></div>
                         </div>
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
                                     <h4 class="text-dark mb-4">Двоичный калькулятор</h4>
                                 </div>
-                                <form class="user" onsubmit="" >
+                                <form class="user" onsubmit="">
                                     <div class="form-group">
                                         <h5 class="text-md-center">Введите <b>два числа</b> и выбирите действие</h5>
-                                        <input class="form-control form-control-user text-center m-1" type="text" id="inputA" placeholder="Введите первое число">
+                                        <input class="form-control form-control-user text-center m-1" type="text"
+                                               id="inputA" placeholder="Введите первое число">
                                         <div class="row">
-                                            <a class="btn btn-success" style="margin-left: 150px" onclick="multiply()">X</a>
+                                            <a class="btn btn-success" style="margin-left: 150px"
+                                               onclick="multiply()">X</a>
                                             <a class="btn btn-success" style="margin-left: 20px" onclick="add()">+</a>
                                         </div>
-                                        <input class="form-control m-1 form-control-user text-center" type="text" id="inputB" placeholder="Введите второе число">
+                                        <input class="form-control m-1 form-control-user text-center" type="text"
+                                               id="inputB" placeholder="Введите второе число">
                                         <h3><p id="mathResult"></p></h3>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-9 col-lg-12 col-xl-10">
+            <div class="card shadow-lg o-hidden border-0 my-5">
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-lg-6 d-none d-lg-flex">
+                            <div class="flex-grow-1 bg-login-image"
+                                 style="background-image: url('https://lapki.pet/uploads/article/43/coderzhanie-akita-inu.jpg');"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h4 class="text-dark mb-4">Сетевой калькулятор</h4>
+                                </div>
+                                <form class="user" onsubmit="">
+                                    <div class="form-group">
+                                        <h5 class="text-md-center">Введите маску подсети и ip-адрес</h5>
+                                        <div class="row col-12">
+                                            <input onchange="mask()" placeholder="0" id="maskPrefix" type="number" class="col-5 form-control text-center">
+                                            <a class="btn btn-success"
+                                               onclick="mask()">X</a>
+                                        </div>
+                                        <h5>Маска подсети</h5>
+                                        <div class="row col-12">
+                                            <input id="mask1" required min="0" max="255" type="number"
+                                                   onchange="ip()" class="col-3 form-control text-center" value="0">
+                                            <input id="mask2" required min="0" max="255" type="number"
+                                                   onchange="ip()" class="col-3 form-control  text-center" value="0">
+                                            <input id="mask3" required min="0" max="255" type="number"
+                                                   onchange="ip()" class="col-3 form-control  text-center" value="0">
+                                            <input id="mask4" required min="0" max="255" type="number"
+                                                   onchange="ip()" class="col-3 form-control  text-center" value="0">
+                                        </div>
+                                        <h5>IP-адрес узла</h5>
+                                        <div class="row col-12">
+                                            <input id="ip1" required min="0" max="255" type="number"
+                                                   onchange="ip()" class="col-3 form-control  text-center" value="0">
+                                            <input id="ip2" required min="0" max="255" type="number"
+                                                   onchange="ip()" class="col-3 form-control  text-center" value="0">
+                                            <input id="ip3" required min="0" max="255" type="number"
+                                                   onchange="ip()" class="col-3 form-control  text-center" value="0">
+                                            <input id="ip4" required min="0" max="255" type="number"
+                                                   onchange="ip()" class="col-3 form-control  text-center" value="0">
+                                        </div>
+                                        <a onclick="ip()" class="btn btn-success">Result</a>
+                                        <p id="ipresult"></p>
+
                                     </div>
                                 </form>
 
@@ -92,66 +163,128 @@
 </div>
 <script src="assets/js/jquery.min.js"></script>
 <script>
-    function halfAdder(a, b){
-        const sum = xor(a,b);
-        const carry = and(a,b);
+    function ip () {
+        let m = "";
+        m+= parseInt(document.getElementById("mask1").value) + "."
+        m+= parseInt(document.getElementById("mask2").value) + "."
+        m+= parseInt(document.getElementById("mask3").value) + "."
+        m+= parseInt(document.getElementById("mask4").value)
+        let i = "";
+        i+= parseInt(document.getElementById("ip1").value) + "."
+        i+= parseInt(document.getElementById("ip2").value) + "."
+        i+= parseInt(document.getElementById("ip3").value) + "."
+        i+= parseInt(document.getElementById("ip4").value)
+        let result = "";
+        let is = i.split('.');
+        let ms = m.split('.');
+        let node = ""
+        result += (parseInt(is[0]) & parseInt(ms[0])) + "."
+        result += (parseInt(is[1]) & parseInt(ms[1])) + "."
+        result += (parseInt(is[2]) & parseInt(ms[2])) + "."
+        result += (parseInt(is[3]) & parseInt(ms[3]))
+        node += parseInt(document.getElementById("ip1").value) - result.split(".")[0]+".";
+        node += parseInt(document.getElementById("ip2").value) - result.split(".")[1]+".";
+        node += parseInt(document.getElementById("ip3").value) - result.split(".")[2]+".";
+        node += parseInt(document.getElementById("ip4").value) - result.split(".")[3];
+        document.getElementById("ipresult").innerText =
+            `Адрес сети: ${result}\nУзел: ${node}`
+    }
+    function mask () {
+        let prefix = parseInt(document.getElementById ("maskPrefix").value);
+        let result = "";
+        let c = 0;
+        for ( let i = 0 ; i < 32; i ++ ) {
+            if (c == 8){
+                result+=".";
+                c=0;
+            }
+            if(i<prefix){
+                result+="1";
+            }else{
+                result+="0";
+            }
+            c++;
+        }
+        let m = result.split('.');
+        document.getElementById("mask1").value = parseInt(m[0],2);
+        document.getElementById("mask2").value = parseInt(m[1],2);
+        document.getElementById("mask3").value = parseInt(m[2],2);
+        document.getElementById("mask4").value = parseInt(m[3],2);
+        ip();
+    }
+
+    function halfAdder ( a, b ) {
+        const sum = xor (a, b);
+        const carry = and (a, b);
         return [sum, carry];
     }
-    function fullAdder(a, b, carry){
-        halfAdd = halfAdder(a,b);
-        const sum = xor(carry, halfAdd[0]);
-        carry = and(carry, halfAdd[0]);
-        carry = or(carry, halfAdd[1]);
+
+    function fullAdder ( a, b, carry ) {
+        halfAdd = halfAdder (a, b);
+        const sum = xor (carry, halfAdd[ 0 ]);
+        carry = and (carry, halfAdd[ 0 ]);
+        carry = or (carry, halfAdd[ 1 ]);
         return [sum, carry];
     }
-    function xor(a, b){return (a === b ? 0 : 1);}
-    function and(a, b){return a == 1 && b == 1 ? 1 : 0;}
-    function or(a, b){return (a || b);}
-    function addBinary(a, b){
+
+    function xor ( a, b ) {
+        return ( a === b ? 0 : 1 );
+    }
+
+    function and ( a, b ) {
+        return a == 1 && eb == 1 ? 1 : 0;
+    }
+
+    function or ( a, b ) {
+        return ( a || b );
+    }
+
+    function addBinary ( a, b ) {
         let sum = '';
         let carry = '';
-        for(var i = a.length-1;i>=0; i--){
-            if(i === a.length-1){
+        for ( var i = a.length - 1 ; i >= 0 ; i -- ) {
+            if ( i === a.length - 1 ) {
                 //half add the first pair
-                const halfAdd1 = halfAdder(a[i],b[i]);
-                sum = halfAdd1[0]+sum;
-                carry = halfAdd1[1];
-            }else{
+                const halfAdd1 = halfAdder (a[ i ], b[ i ]);
+                sum = halfAdd1[ 0 ] + sum;
+                carry = halfAdd1[ 1 ];
+            } else {
                 //full add the rest
-                const fullAdd = fullAdder(a[i],b[i],carry);
-                sum = fullAdd[0]+sum;
-                carry = fullAdd[1];
+                const fullAdd = fullAdder (a[ i ], b[ i ], carry);
+                sum = fullAdd[ 0 ] + sum;
+                carry = fullAdd[ 1 ];
             }
         }
 
         return carry ? carry + sum : sum;
     }
 
-    function add(){
-        let a = document.getElementById("inputA").value.toString();
-        let b = document.getElementById("inputB").value.toString();
+    function add () {
+        let a = document.getElementById ("inputA").value.toString ();
+        let b = document.getElementById ("inputB").value.toString ();
         let action = `${a}\n+\n${b}\n________\n`;
-        let result = `${addBinary(a,b)} – Результат\n`;
-        let test =`Проверка: ${parseInt(a,2)} + ${parseInt(b,2)} = ${parseInt(a,2) + parseInt(b,2)} (${(parseInt(a,2) + parseInt(b,2)).toString(2)})`;
-        let c = document.getElementById("mathResult");
-        c.innerText = action+result + test;
+        let result = `${addBinary (a, b)} – Результат\n`;
+        let test = `Проверка: ${parseInt (a, 2)} + ${parseInt (b, 2)} = ${parseInt (a, 2) + parseInt (b,
+            2)} (${( parseInt (a, 2) + parseInt (b, 2) ).toString (2)})`;
+        let c = document.getElementById ("mathResult");
+        c.innerText = action + result + test;
 
     }
 
-    function multiply(){
-        let a = parseInt(document.getElementById("inputA").value,2);
-        let b = parseInt(document.getElementById("inputB").value,2);
-        let action = `${document.getElementById("inputA").value}\n*\n${document.getElementById("inputB").value}\n________\n`;
-        let result = `${(a*b).toString(2)} – Результат\n`;
-        let test =`Проверка: ${a} X ${b} = ${a*b} (${(a*b).toString(2)})`;
-        let c = document.getElementById("mathResult");
-        c.innerText =action+ result + test;
+    function multiply () {
+        let a = parseInt (document.getElementById ("inputA").value, 2);
+        let b = parseInt (document.getElementById ("inputB").value, 2);
+        let action = `${document.getElementById ("inputA").value}\n*\n${document.getElementById ("inputB").value}\n________\n`;
+        let result = `${( a * b ).toString (2)} – Результат\n`;
+        let test = `Проверка: ${a} X ${b} = ${a * b} (${( a * b ).toString (2)})`;
+        let c = document.getElementById ("mathResult");
+        c.innerText = action + result + test;
     }
 
-    function doMagic(n){
-        let i = document.getElementById("input").value;
-        let a = parseInt(i,n);
-        alert(`
+    function doMagic ( n ) {
+        let i = document.getElementById ("input").value;
+        let a = parseInt (i, n);
+        alert (`
 Десятичной: ${a}
 Двоичной: ${a.toString (2)}
 Восмиричной: ${a.toString (8)}

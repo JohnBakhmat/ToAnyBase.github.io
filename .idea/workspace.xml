@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cf9480f-fd1a-470d-b870-8f3788a005a2" name="Default Changelist" comment="Binary Calc">
+    <list default="true" id="2cf9480f-fd1a-470d-b870-8f3788a005a2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/action.js" beforeDir="false" afterPath="$PROJECT_DIR$/action.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +20,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1klvkPsQCn1efzCo48SlLOVb7Qe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -70,8 +70,19 @@
       <workItem from="1606288137261" duration="6620000" />
       <workItem from="1607363783234" duration="120000" />
       <workItem from="1607363946264" duration="478000" />
-      <workItem from="1607498507395" duration="2560000" />
+      <workItem from="1607498507395" duration="3632000" />
+      <workItem from="1607601789385" duration="3657000" />
+      <workItem from="1608708931329" duration="875000" />
+      <workItem from="1609162250835" duration="326000" />
     </task>
+    <task id="LOCAL-00001" summary="Binary Calc">
+      <created>1607501124514</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607501124515</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
